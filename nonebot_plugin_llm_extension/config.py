@@ -2,7 +2,16 @@ from pydantic import Field, BaseModel
 from nonebot import get_plugin_config
 
 
-class ScopedConfig(BaseModel): ...
+class ScopedConfig(BaseModel):
+    base_url: str = "https://api.deepseek.com/v1"
+    """LLM Endpoint"""
+    api_key: str = ""
+    """API Key"""
+    model: str = "deepseek-reasoner"
+    """Model Name"""
+
+    only_alconna: bool = True
+    """Only respond to Alconna commands"""
 
 
 class Config(BaseModel):
@@ -10,4 +19,4 @@ class Config(BaseModel):
     """LLM Extension Config"""
 
 
-plugin_config = get_plugin_config(Config).llm_extension
+config = get_plugin_config(Config).llm_extension

@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach",
+      "type": "debugpy",
+      "request": "attach",
+      "processId": "${command:pickProcess}",
+      "justMyCode": false
+    },
+    {
+      "name": "Launch",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\bot.py",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}
