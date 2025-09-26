@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-llm-extension"
-version = "0.1.0"
+version = "0.1.1"
 description = "利用 LLM 将自然语言转换为机器人指令 / Convert natural language messages into bot commands using LLMs"
 authors = [
     { name = "KomoriDev", email = "mute231010@gmail.com" },
