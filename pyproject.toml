@@ -12,7 +12,7 @@ keywords = ["nonebot"]
 requires-python = ">=3.10"
 dependencies = [
     "nonebot-plugin-alconna>=0.59.4",
-    "nonebot2[fastapi,httpx]>=2.4.3",
+    "nonebot2>=2.4.3",
 ]
 
 [project.urls]
@@ -22,7 +22,7 @@ repository = "https://github.com/KomoriDev/nonebot-plugin-llm-extension"
 [dependency-groups]
 dev = [
     "nonebot-adapter-onebot>=2.4.6",
-    "nonebot2[fastapi]>=2.4.3",
+    "nonebot2[fastapi,httpx]>=2.4.3",
     "pre-commit>=4.2.0",
     "ruff>=0.12.0",
 ]
