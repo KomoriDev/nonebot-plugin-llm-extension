@@ -59,10 +59,9 @@ class LLMClient:
             **kwargs,
         }
 
-        async with driver.get_session() as session:
-            response = await session.request(
-                Request("POST", url, headers=self._build_headers(), json=payload)
-            )
+        response = await self.session.request(
+            Request("POST", url, headers=self._build_headers(), json=payload)
+        )
 
         assert response.content
 
