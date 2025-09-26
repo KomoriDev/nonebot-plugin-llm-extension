@@ -1,5 +1,5 @@
 from nonebot import require
-from nonebot.plugin import PluginMetadata
+from nonebot.plugin import PluginMetadata, inherit_supported_adapters
 
 require("nonebot_plugin_alconna")
 
@@ -14,7 +14,7 @@ __plugin_meta__ = PluginMetadata(
     type="library",
     homepage="https://github.com/KomoriDev/nonebot-plugin-llm-extension",
     config=Config,
-    supported_adapters=None,
+    supported_adapters=inherit_supported_adapters("nonebot_plugin_alconna"),
     extra={
         "unique_name": "LLM Extension",
         "author": "Komorebi <mute231010@gmail.com>",
